@@ -1,0 +1,74 @@
+*-- Arquivo comum de inclusão
+
+#include "foxpro.h"
+#include "registry.h"
+#include "teclas.h"
+
+
+*-- Caracteres
+#DEFINE CRLF						CHR(13)+CHR(10)
+#DEFINE CR							CHR(13)
+#DEFINE TAB							CHR(9)
+
+*-- Teclas
+#DEFINE K_ENTER						13
+#DEFINE K_ESC						27
+
+*-- Direitos de acesso
+#define AC_NAO						0
+#define AC_CONSULTA					1
+#define AC_ALTERA					2
+#define AC_INCLUI					3
+#define AC_EXCLUI					4
+
+*-- Status do BaseForm
+#define FORM_VISUALIZANDO			"V"
+#define FORM_INCLUINDO				"I"
+#define FORM_EDITANDO				"E"
+#define FORM_ALTERANDO				"E"
+
+*-- Nomes de barras de ferramentas
+#DEFINE TB_FORMDESIGNER_LOC  		"Form Designer"
+#DEFINE TB_STANDARD_LOC      		"Standard"
+#DEFINE TB_LAYOUT_LOC        		"Layout"
+#DEFINE TB_QUERY_LOC		 		"Query Designer"
+#DEFINE TB_VIEWDESIGNER_LOC 		"View Designer"
+#DEFINE TB_COLORPALETTE_LOC  		"Color Palette"
+#DEFINE TB_FORMCONTROLS_LOC  		"Form Controls"
+#DEFINE TB_DATADESIGNER_LOC  		"Database Designer"
+#DEFINE TB_REPODESIGNER_LOC  		"Report Designer"
+#DEFINE TB_REPOCONTROLS_LOC  		"Report Controls"
+#DEFINE TB_PRINTPREVIEW_LOC  		"Print Preview"
+
+*-- Dias da semana
+#define DIAS_DA_SEMANA 				"Domingo        Segunda-feira  Terça-feira    Quarta-feira   Quinta-feira   Sexta-feira    Sábado                        "
+
+*-- Meses do ano
+#define MESES_DO_ANO				"Janeiro     Fevereiro   Março       Abril       Maio        Junho       Julho       Agosto      Setembro    Outubro     Novembro    Dezembro                "
+
+*-- Mensagens
+#DEFINE MSG_AJUDANAODISPONIVEL 		"Ajuda não disponível."
+#DEFINE MSG_ERRORLOCK				"Erro bloqueando registro."
+#DEFINE MSG_TENTARLOCK				"Este registro está bloqueado por outra estação." + CRLF + "Você quer tentar novamente?"
+#DEFINE MSG_TENTAFLOCK				"O arquivo de @ não pode ser bloqueado." + CRLF + "Você quer tentar novamente?"
+#DEFINE MSG_ABANDONAMUDANCAS		"Dados foram alterados. Abandona alterações sem salvar?"
+#DEFINE MSG_NAOREGEXCLUIR			"Não há registro para ser excluido."
+#DEFINE MSG_NAOREGALTERAR			"Não há registro para ser alterado."
+#DEFINE MSG_CONFEXCLUSAO			"Você confirma exclusão desse registro?"
+#DEFINE MSG_SAIRSISTEMA				"Você tem certeza que quer sair do sistema?"
+#DEFINE MSG_PROSSEGUIR				"Você quer prosseguir mesmo assim?"
+#DEFINE MSG_ALTERADOPOROUTRO		"Este registro foi alterado por outro usuário."
+#DEFINE MSG_METHOD          		"Método: "
+#DEFINE MSG_LINENUM					"Linha: "
+#DEFINE MSG_USUARIONAOCADASTRADO	"Usuário @ não cadastrado."
+#DEFINE MSG_SENHAINCORRETA			"Senha incorreta."
+#DEFINE MSG_ERROSINTATICOCONDICAO	"Erro sintático na condição."
+#DEFINE MSG_ERROSINTATICOEXPRESSAO	"Erro sintático na expressão."
+#DEFINE MSG_ERROLOCALIZACAO			"Erro na localização."
+#DEFINE MSG_ERROCRIANDOARQUIVO		"Erro na criação do arquivo @."
+#DEFINE MSG_ASKATUALIZAVERSAO		"A versão @ do sistema já está disponível para atualização." + CRLF + "Você que atualizar agora?"
+#DEFINE MSG_TELLATUALIZAVERSAO		"A versão @ do sistema já está disponível para atualização." + CRLF + "Por favor atualize agora."
+#DEFINE MSG_ASKLOCALIZABASEDADOS	"Não foi possível encontrar a base de dados. Você quer localizar?"
+#DEFINE MSG_VERSAOARQUIVOSINCOMP    "Versão dos arquivos incompatível. Você quer localizar outra base de dados?"
+
+*-- EOF
